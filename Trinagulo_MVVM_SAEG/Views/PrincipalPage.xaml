@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trinagulo_MVVM_SAEG.Views.PrincipalPage">
+    <StackLayout Padding="15, 25, 15, 15">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="¿Es un triangulo?" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Grid>
+            <Label Grid.Column="0" Grid.Row="0" Text="Base:" FontSize="16"/>
+            <Entry Grid.Column="1" Grid.Row="0" Placeholder="Base" Keyboard="Numeric" Text="{Binding Base}"/>
+            <Label Grid.Column="0" Grid.Row="1" Text="Lados: "/>
+            <Entry Grid.Column="1" Grid.Row="1" Placeholder="Lado 1" Keyboard="Numeric" Text="{Binding Lado1}"/>
+            <Entry Grid.Column="2" Grid.Row="1" Placeholder="Lado 2" Keyboard="Numeric" Text="{Binding Lado2}"/>
+            <Button Grid.ColumnSpan="3" Grid.Row="3" VerticalOptions="Center" Text="¿Es  un triangulo?" Command="{Binding EventoButton}"/>
+            <Image Grid.ColumnSpan="3" Grid.Row="4" Source="Equilatero.png" IsVisible="{Binding Imagen1}"/>
+            <Image Grid.ColumnSpan="3" Grid.Row="4" Source="Escaleno.png" IsVisible="{Binding Imagen2}" />
+            <Image Grid.ColumnSpan="3" Grid.Row="4" Source="Isosceles.png" IsVisible="{Binding Imagen3}"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
